@@ -12,7 +12,7 @@
 
     <Button
       class="music-button"
-      icon="pi pi-volume-up"
+      :icon="isPlaying ? 'pi pi-volume-up' : 'pi pi-volume-off'"
       rounded
       severity="primary"
       variant="text"
@@ -80,13 +80,21 @@
   }
 
   :deep(.p-button-text:not(:disabled):hover) {
-    background: rgba(255, 255, 255, 0.2);
-    border-color: white;
-    color: white;
+    background: transparent !important;
+    border-color: #261c0c !important;
+    color: #261c0c !important;
+    outline-color: #261c0c !important;
   }
 
-  :deep(.p-button-text) {
-    color: #eeeeee !important;
+  :deep(
+    .p-button-text,
+    .p-button:not(:disabled):hover,
+    .p-button:not(:disabled):active,
+    .p-button-text:not(:disabled):hover
+  ) {
+    color: #261c0c !important;
+    background: transparent !important;
+    border: #261c0c !important;
   }
 
   .cinematic-enter-active,

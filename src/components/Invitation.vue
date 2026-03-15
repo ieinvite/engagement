@@ -2,7 +2,7 @@
   <div class="container">
     <div class="hero">
       <video autoplay class="bg-video" loop muted playsinline>
-        <source src="/video/background.mp4" type="video/mp4" />
+        <source src="/video/background2.mp4" type="video/mp4" />
       </video>
 
       <div class="hero-content">
@@ -267,7 +267,7 @@
   .container {
     width: 100%;
     min-height: 100vh;
-    background: lightgoldenrodyellow;
+    background: #261c0c;
   }
 
   .hero {
@@ -279,7 +279,6 @@
 
   .names {
     font-family: 'Monsieur La Doulaise', cursive;
-    color: white;
     text-align: center;
     letter-spacing: 0.08em;
     text-shadow:
@@ -337,11 +336,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: #261c0c;
   }
 
   .divider-icon {
-    color: floralwhite;
+    color: #261c0c;
     margin-top: 3px;
   }
 
@@ -354,7 +353,7 @@
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    color: white;
+    color: #261c0c;
     z-index: 2;
     text-align: center;
     font-size: 12px;
@@ -375,12 +374,16 @@
   }
 
   .scroll-icon {
-    color: white;
+    color: #261c0c;
     opacity: 0.9;
   }
 
   :deep(.p-divider-content) {
     background: none !important;
+  }
+
+  :deep(.p-divider:before) {
+    border-top: 1px solid #261c0c;
   }
 
   :deep(.p-divider-horizontal) {
@@ -391,21 +394,23 @@
     padding: 60px 30px 60px;
     text-align: center;
     border-radius: 0;
-    background: lightgoldenrodyellow;
   }
 
   .invitation-title {
     font-size: 36px;
     font-family: 'Imperial Script', cursive;
+    color: #261c0c;
   }
 
   .invitation-text {
     font-size: 16px;
+    color: #261c0c;
   }
 
   .info-card {
     position: relative;
     padding: 40px 0 80px;
+    background-color: #e7dccf;
   }
 
   .doodle-top-center {
@@ -432,19 +437,19 @@
     padding: 60px 30px 70px;
     text-align: center;
     border-radius: 0;
-    background: #8bbf56;
+    background: #c2ab90;
   }
 
   .countdown-inner {
-    background: #b4e087;
+    background: #e7dccf;
     position: relative;
     padding: 20px 0 60px;
   }
 
   .countdown-text {
     font-size: 22px;
-    color: #2c4f09;
-    text-shadow: #b4e087 1px 0 1px;
+    color: #261c0c;
+    text-shadow: #dccdb9 1px 0 1px;
   }
 
   .countdown-grid {
@@ -457,28 +462,28 @@
   .time-card {
     text-align: center;
     border-radius: 16px;
-    background: #4b8017;
+    background: #dccdb9;
   }
 
   .time-value {
     font-size: 36px;
     font-weight: bold;
-    color: #d1f5ae;
-    text-shadow: 1px 1px 3px #d2d2d2;
+    color: #261c0c;
+    text-shadow: 1px 1px 3px #c2ab90;
   }
 
   .time-label {
     font-size: 16px;
     margin-top: 5px;
     opacity: 0.7;
-    color: #d1f5ae;
-    text-shadow: 1px 1px 3px #d2d2d2;
+    color: #261c0c;
+    text-shadow: 1px 1px 3px #c2ab90;
   }
 
   .map-outer-card {
     text-align: center;
     border-radius: 0;
-    background: #d4b4e8;
+    background: #261c0c;
   }
 
   .map-inner-card {
@@ -490,23 +495,26 @@
     max-width: 500px;
     margin: 0 auto 30px auto;
     border-radius: 20px;
+    background-color: #e7dccf;
   }
 
   .map-title {
     font-size: 24px;
     margin-bottom: 10px;
-    color: #946896 !important;
+    color: #261c0c !important;
   }
 
   .venue-name {
     font-weight: 600;
     font-size: 18px;
     margin-bottom: 5px;
+    color: #261c0c !important;
   }
 
   .venue-address {
     opacity: 0.8;
     margin-bottom: 15px;
+    color: #261c0c !important;
   }
 
   .map-frame {
@@ -517,9 +525,9 @@
   .map-button {
     display: inline-block;
     padding: 10px 20px;
-    background: white;
-    color: #946896;
-    border-color: #946896 !important;
+    background: #e7dccf;
+    color: #261c0c;
+    border-color: #261c0c !important;
     border-radius: 30px;
     margin-top: 10px;
     text-decoration: none;
@@ -553,35 +561,59 @@
   }
 
   :deep(.p-button-outlined:not(:disabled):hover) {
-    background: rgba(212, 180, 232, 0.62);
-    border-color: #946896;
-    color: #946896;
+    background: rgba(194, 171, 144, 0.48);
+    border-color: #261c0c;
+    color: #261c0c;
   }
 
   .faq-card {
     text-align: center;
     border-radius: 0;
-    background: #ffaec9;
+    background: #c2ab90;
   }
 
   .faq-title {
-    color: #ba5170;
+    color: #261c0c;
   }
 
   :deep(.p-accordionheader) {
-    background-color: #ffd9e5;
+    background-color: #e7dccf;
+    color: #261c0c;
   }
 
   :deep(.p-accordionpanel:not(.p-disabled).p-accordionpanel-active .p-accordionheader:hover) {
-    background: #ffd9e5;
+    background: #e7dccf;
+    color: #261c0c;
   }
 
   :deep(.p-accordionpanel:not(.p-accordionpanel-active):not(.p-disabled) .p-accordionheader:hover) {
-    background: #ffd9e5;
+    background: #e7dccf;
+    color: #261c0c;
+  }
+
+  :deep(.p-accordionpanel:not(.p-disabled).p-accordionpanel-active > .p-accordionheader) {
+    background: #e7dccf;
+    color: #261c0c;
   }
 
   :deep(.p-accordioncontent .p-accordioncontent-content .m-0) {
     margin-top: 0;
+    color: #261c0c;
+  }
+
+  :deep(.p-accordioncontent-content) {
+    background: #eeeae5;
+  }
+
+  :deep(.p-accordionpanel:not(.p-disabled).p-accordionpanel-active > .p-accordionheader:hover .p-accordionheader-toggle-icon) {
+    color: #261c0c;
+  }
+  :deep(.p-accordionpanel:not(.p-disabled).p-accordionpanel-active > .p-accordionheader:hover) {
+    color: #261c0c;
+  }
+
+  :deep(.p-accordionheader-toggle-icon) {
+    color: #261c0c;
   }
 
   .fade-on-scroll {
