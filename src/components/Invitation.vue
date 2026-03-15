@@ -38,7 +38,7 @@
           <i class="pi pi-star-fill divider-icon" />
         </Divider>
 
-        <p class="date-text fade-on-scroll">16 Mayıs 2026</p>
+        <p class="date-text fade-on-scroll">27 Haziran 2026</p>
       </div>
 
       <div class="scroll-indicator">
@@ -59,7 +59,7 @@
           <template #content>
             <div class="invitation-text fade-on-scroll">
               <p>
-                Hayatlarımızı birleştirme yolunda attığımız bu özel adımda, mutluluğumuzu bizim için
+                Hayatlarımızı birleştirme yolunda attığımız bu ilk adımda, mutluluğumuzu bizim için
                 kıymetli olan aile büyüklerimiz ve dostlarımızla paylaşmanın heyecanını yaşıyoruz.
               </p>
               <p>Nişan törenimizde sizleri de aramızda görmekten onur ve mutluluk duyarız.</p>
@@ -119,10 +119,10 @@
               <template #content>
                 <h2 class="map-title">📍 Konum Bilgisi</h2>
 
-                <p class="venue-name">Erdal İnönü Parkı Organizasyon Alanı</p>
+                <p class="venue-name">Bereket Evi Organizasyon ve Etkinlik Salonları</p>
 
                 <p class="venue-address">
-                  Lara park, Şirinyalı, Lara Cd. No:26, 07160 Muratpaşa/Antalya, Türkiye
+                  Macun, Fabrika Sokak, No: 35, Aksu/Antalya
                 </p>
 
                 <div class="map-container">
@@ -210,9 +210,9 @@
   import { onMounted, onUnmounted, ref } from 'vue'
 
   const location =
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3192.210437980804!2d30.72532957530592!3d36.86138146424924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c39b00696c1a13%3A0x6d231fdb011b2132!2zRXJkYWwgxLBuw7Zuw7wgUGFya8SxIE9yZ2FuaXphc3lvbiBBbGFuxLE!5e0!3m2!1str!2sus!4v1771692598014!5m2!1str!2sus'
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3188.214344066977!2d30.837471675310397!3d36.95693735884953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c3810f4b8bd8ed%3A0x4a4234bff5c0db93!2sBereket%20Evi%20Organizasyon%20ve%20Etkinlik%20Salonlar%C4%B1!5e0!3m2!1str!2sus!4v1773593325890!5m2!1str!2sus'
 
-  const targetDate = new Date('2026-05-16T19:00:00')
+  const targetDate = new Date('2026-06-27T19:00:00')
 
   const days = ref(0)
   const hours = ref(0)
