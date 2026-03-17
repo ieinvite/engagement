@@ -1,6 +1,6 @@
 <template>
   <div class="intro" @click="start">
-    <video ref="video" class="video" playsinline src="/video/intro2.mp4" />
+    <video ref="video" class="video" playsinline src="/video/intro.mp4" />
 
     <div v-if="!started" class="overlay">
       <h2>Davetiyeyi açmak için tıklayın</h2>

@@ -2,7 +2,7 @@
   <div class="container">
     <div class="hero">
       <video autoplay class="bg-video" loop muted playsinline>
-        <source src="/video/background2.mp4" type="video/mp4" />
+        <source src="/video/background.mp4" type="video/mp4" />
       </video>
 
       <div class="hero-content">
@@ -39,6 +39,7 @@
         </Divider>
 
         <p class="date-text fade-on-scroll">27 Haziran 2026</p>
+        <p class="date-text fade-on-scroll ">19:00</p>
       </div>
 
       <div class="scroll-indicator">
@@ -157,44 +158,39 @@
         </template>
 
         <template #content>
-          <Accordion value="">
+          <Accordion :multiple="true">
             <AccordionPanel value="0">
-              <AccordionHeader>Header I</AccordionHeader>
+              <AccordionHeader>Organizasyon</AccordionHeader>
               <AccordionContent>
-                <p class="m-0">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                  pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                  officia deserunt mollit anim id est laborum.
+                <p class="m-0 padding-medium">
+                  Nişan organizasyonumuz, siz değerli misafirlerimiz için hazırlanan özel bir akşam yemeği programı eşliğinde gerçekleşecektir.
                 </p>
+
+                <img class="food-doodle" src="/doodle/food-dish.svg" />
               </AccordionContent>
             </AccordionPanel>
             <AccordionPanel value="1">
-              <AccordionHeader>Header II</AccordionHeader>
+              <AccordionHeader>Anılarınızı Bizimle Paylaşın</AccordionHeader>
               <AccordionContent>
-                <p class="m-0">
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                  doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-                  veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-                  voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
-                  magni dolores eos qui ratione voluptatem sequi nesciunt. Consectetur, adipisci
-                  velit, sed quia non numquam eius modi.
-                </p>
-              </AccordionContent>
-            </AccordionPanel>
-            <AccordionPanel value="2">
-              <AccordionHeader>Header III</AccordionHeader>
-              <AccordionContent>
-                <p class="m-0">
-                  At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-                  praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias
-                  excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui
-                  officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem
-                  rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est
-                  eligendi optio cumque nihil impedit quo minus.
-                </p>
+                <div class="upload-section">
+                  <p class="m-0">
+                    Bu özel günde çektiğiniz fotoğrafları bizimle paylaşmak isterseniz aşağıdaki bağlantıyı kullanabilirsiniz.
+                  </p>
+                  <p class="m-0">
+                    Sizin gözünüzden anılarımızı görmek bizi çok mutlu eder ✨
+                  </p>
+
+                  <div class="buttons">
+                    <Button
+                        label="    Fotoğraf Yükle"
+                        icon="pi pi-upload"
+                        class="upload-btn"
+                        @click="openDrive"
+                        rounded
+                        variant="outlined"
+                    />
+                  </div>
+                </div>
               </AccordionContent>
             </AccordionPanel>
           </Accordion>
@@ -211,6 +207,8 @@
 
   const location =
     'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3188.214344066977!2d30.837471675310397!3d36.95693735884953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c3810f4b8bd8ed%3A0x4a4234bff5c0db93!2sBereket%20Evi%20Organizasyon%20ve%20Etkinlik%20Salonlar%C4%B1!5e0!3m2!1str!2sus!4v1773593325890!5m2!1str!2sus'
+
+  const driveLink = 'https://forms.gle/g7j9SSCzoes4c5VVA'
 
   const targetDate = new Date('2026-06-27T19:00:00')
 
@@ -257,6 +255,10 @@
   onUnmounted(() => {
     clearInterval(interval)
   })
+
+  const openDrive = () => {
+    window.open(driveLink, '_blank')
+  }
 
   const openMaps = () => {
     window.open(location)
@@ -616,6 +618,10 @@
     color: #261c0c;
   }
 
+  .padding-medium {
+    padding-top: 18px !important;
+  }
+
   .fade-on-scroll {
     opacity: 0;
     transform: translateY(40px);
@@ -640,6 +646,11 @@
     animation-delay: 0.5s;
   }
 
+  .food-doodle {
+    margin-top: 10px;
+    width: 50px;
+  }
+
   @keyframes closingFade {
     from {
       opacity: 0;
@@ -651,5 +662,34 @@
       transform: translateY(0);
       filter: blur(0);
     }
+  }
+
+  .upload-section {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+  }
+
+  .upload-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #e7dccf;
+    color: #261c0c;
+    border-color: #261c0c !important;
+    border-radius: 30px;
+    margin-top: 10px;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  .upload-btn:hover {
+    transform: translateY(-2px) scale(1.05);
   }
 </style>
