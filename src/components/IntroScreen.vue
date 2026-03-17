@@ -68,4 +68,10 @@
       transform: translateY(-6px);
     }
   }
+
+  @media (prefers-color-scheme: dark) {
+    .overlay {
+      color: #261c0c !important;
+    }
+  }
 </style>

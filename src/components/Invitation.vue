@@ -692,4 +692,30 @@
   .upload-btn:hover {
     transform: translateY(-2px) scale(1.05);
   }
+
+  @media (prefers-color-scheme: dark) {
+    .container { background-color: #261c0c !important; }
+    .hero-content { color: #261c0c !important; }
+    .divider-icon { color: #261c0c !important; }
+    .scroll-indicator { color: #261c0c !important; }
+    .scroll-icon { color: #261c0c !important; }
+    .invitation-title { color: #261c0c !important; }
+    .invitation-text { color: #261c0c !important; }
+    .faq-title { color: #261c0c !important; }
+    .time-value { color: #261c0c !important; }
+    .time-label { color: #261c0c !important; }
+    .map-title { color: #261c0c !important; }
+    .venue-name { color: #261c0c !important; }
+    .venue-address { color: #261c0c !important; }
+    .info-card { background-color: #e7dccf !important; color: #261c0c !important; }
+    .countdown { background-color: #c2ab90 !important; }
+    .countdown-inner { background-color: #e7dccf !important; color: #261c0c !important; }
+    .map-button { background: #e7dccf !important; color: #261c0c !important; border-color: #261c0c !important;}
+    .countdown-text { color: #261c0c !important; }
+    .faq-card { background-color: #c2ab90 !important; color: #261c0c !important; }
+    .map-outer-card { background-color: #261c0c !important; color: #261c0c !important; }
+    .map-content-card { background-color: #e7dccf !important; color: #261c0c !important; }
+    .time-card { background: #dccdb9 !important;}
+    .upload-btn { background: #e7dccf !important; color: #261c0c !important; border-color: #261c0c !important;}
+  }
 </style>
